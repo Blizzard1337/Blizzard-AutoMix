@@ -1,5 +1,7 @@
 # BlizzardAutoMix
 
+> **Want to use BlizzardAutoMix?** Join our [Discord server](https://discord.gg/jQMAecQzNT) and open a ticket to request access for your server.
+
 **FACEIT-style 5v5 match management for Counter-Strike 2.**
 
 BlizzardAutoMix takes players from warmup through captain selection, team drafting, a knife round and a live match, with in-game menus and configurable server rules.
@@ -131,12 +133,6 @@ Edit `game/csgo/cfg/BlizzardAutoMix/config.cfg`. These are server configuration 
 Setting `replace_disconnected_players false` disables both bot replacement and bot filling on `.start`. Human spectators can still join vacant team places. Automatic ready starts still require 10 humans.
 
 The configuration also includes chat prefixes, hostname formatting, match-start messages and playout settings. All shipped entries have English comments in [config.cfg](BlizzardAutoMix/cfg/BlizzardAutoMix/config.cfg).
-
-## Documentation
-
-- [Commands and aliases — Georgian](docs/BlizzardAutoMix-COMMANDS-ka.md)
-- [Configuration guide — Georgian](docs/BlizzardAutoMix-CONFIG-ka.md)
-- [Release history](BlizzardAutoMix/CHANGELOG.md)
 
 ## License and server authorization
 

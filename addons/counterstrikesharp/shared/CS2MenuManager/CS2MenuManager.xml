@@ -1,0 +1,1516 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CS2MenuManager</name>
+    </assembly>
+    <members>
+        <member name="T:CS2MenuManager.API.Class.BaseMenu">
+            <summary>
+            Represents a base menu with common properties and methods.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+            <summary>
+            Represents a base menu with common properties and methods.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenu.#ctor(System.String,CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Represents a base menu with common properties and methods.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.Title">
+            <summary>
+            Gets or sets the title of the menu.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.ItemOptions">
+            <summary>
+            Gets the list of item options in the menu.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.ExitButton">
+            <summary>
+            Gets or sets a value indicating whether the menu has an exit button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.MenuTime">
+            <summary>
+            Gets or sets the time duration for which the menu is displayed.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.PrevMenu">
+            <summary>
+            Gets or sets the previous menu.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.Plugin">
+            <summary>
+            Gets the plugin instance.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenu.AddItem(System.String,System.Action{CounterStrikeSharp.API.Core.CCSPlayerController,CS2MenuManager.API.Class.ItemOption},CS2MenuManager.API.Enum.DisableOption)">
+            <summary>
+            Adds an item to the menu with a specified display text and selection action.
+            </summary>
+            <param name="display">The text to display for the item.</param>
+            <param name="onSelect">The action to perform when the item is selected.</param>
+            <param name="disableOption">The disable option for the item.</param>
+            <returns>The created item option.</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenu.AddItem(System.String,CS2MenuManager.API.Enum.DisableOption)">
+            <summary>
+            Adds an item to the menu with a specified display text and disable option.
+            </summary>
+            <param name="display">The text to display for the item.</param>
+            <param name="disableOption">The disable option for the item.</param>
+            <returns>The created item option.</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenu.Display(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32)">
+            <summary>
+            Displays the menu to a specific player for a specified duration.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenu.DisplayAt(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32,System.Int32)">
+            <summary>
+            Displays the menu to a specific player for a specified duration, starting from the given item.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="firstItem">First item to begin drawing from.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenu.DisplayToAll(System.Int32)">
+            <summary>
+            Displays the menu to all players for a specified duration.
+            </summary>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenu.DisplayAtToAll(System.Int32,System.Int32)">
+            <summary>
+            Displays the menu to all players for a specified duration, starting from the given item.
+            </summary>
+            <param name="firstItem">First item to begin drawing from.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.ChatMenu_TitleColor">
+            <summary>
+            Gets or sets the color of the title.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.ChatMenu_EnabledColor">
+            <summary>
+            Gets or sets the color of enabled items.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.ChatMenu_DisabledColor">
+            <summary>
+            Gets or sets the color of disabled items.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.ChatMenu_PrevPageColor">
+            <summary>
+            Gets or sets the color of the previous page button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.ChatMenu_NextPageColor">
+            <summary>
+            Gets or sets the color of the next page button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.ChatMenu_ExitColor">
+            <summary>
+            Gets or sets the color of the close button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.CenterHtmlMenu_TitleColor">
+            <summary>
+            Gets or sets the color of the title.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.CenterHtmlMenu_EnabledColor">
+            <summary>
+            Gets or sets the color of enabled items.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.CenterHtmlMenu_DisabledColor">
+            <summary>
+            Gets or sets the color of disabled items.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.CenterHtmlMenu_PrevPageColor">
+            <summary>
+            Gets or sets the color of the previous page button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.CenterHtmlMenu_NextPageColor">
+            <summary>
+            Gets or sets the color of the next page button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.CenterHtmlMenu_ExitColor">
+            <summary>
+            Gets or sets the color of the close button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.CenterHtmlMenu_InlinePageOptions">
+            <summary>
+            Gets or sets a value indicating whether page options are displayed inline.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.CenterHtmlMenu_MaxTitleLength">
+            <summary>
+            Gets or sets the maximum length of the title.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.CenterHtmlMenu_MaxOptionLength">
+            <summary>
+            Gets or sets the maximum length of each option.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_TitleColor">
+            <summary>
+            Gets or sets the color of the title.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_ScrollUpDownKeyColor">
+            <summary>
+            Gets or sets the color of the scroll up/down buttons.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_SelectKeyColor">
+            <summary>
+            Gets or sets the color of the select button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_PrevKeyColor">
+            <summary>
+            Gets or sets the color of the prev button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_ExitKeyColor">
+            <summary>
+            Gets or sets the color of the exit button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_SelectedOptionColor">
+            <summary>
+            Gets or sets the color of the selected option.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_OptionColor">
+            <summary>
+            Gets or sets the color of the options.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_DisabledOptionColor">
+            <summary>
+            Gets or sets the color of the disabled options.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_ArrowColor">
+            <summary>
+            Gets or sets the color of the arrows.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_FreezePlayer">
+            <summary>
+            Gets or sets a value indicating whether the player is frozen while the menu is open.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_ScrollUpKey">
+            <summary>
+            The key binding used to scroll up in the menu.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_ScrollDownKey">
+            <summary>
+            The key binding used to scroll down in the menu.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_SelectKey">
+            <summary>
+            The key binding used to select the currently highlighted menu option.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_PrevKey">
+            <summary>
+            The key binding used to navigate to the previous page or option in the menu.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenu.WasdMenu_ExitKey">
+            <summary>
+            The key binding used to close the menu.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Class.BaseMenuInstance">
+            <summary>
+            Represents a base menu instance with player-specific data.
+            </summary>
+            <param name="player">The player associated with this menu instance.</param>
+            <param name="menu">The menu associated with this instance.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenuInstance.#ctor(CounterStrikeSharp.API.Core.CCSPlayerController,CS2MenuManager.API.Interface.IMenu)">
+            <summary>
+            Represents a base menu instance with player-specific data.
+            </summary>
+            <param name="player">The player associated with this menu instance.</param>
+            <param name="menu">The menu associated with this instance.</param>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenuInstance.Player">
+            <summary>
+            Gets or the player associated with this menu instance.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenuInstance.Page">
+            <summary>
+            Gets or sets the current page number of the menu.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenuInstance.CurrentOffset">
+            <summary>
+            Gets or sets the current offset of the menu items.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenuInstance.NumPerPage">
+            <summary>
+            Gets the number of items displayed per page.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenuInstance.MenuItemsPerPage">
+            <summary>
+            Gets the number of menu items displayed per page.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenuInstance.PrevPageOffsets">
+            <summary>
+            Gets the stack of previous page offsets.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenuInstance.Menu">
+            <summary>
+            Gets the menu associated with this instance.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenuInstance.HasPrevButton">
+            <summary>
+            Gets a value indicating whether the menu has a previous button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenuInstance.HasNextButton">
+            <summary>
+            Gets a value indicating whether the menu has a next button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseMenuInstance.HasExitButton">
+            <summary>
+            Gets a value indicating whether the menu has an exit button.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenuInstance.NextPage">
+            <summary>
+            Navigates to the next page of the menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenuInstance.PrevPage">
+            <summary>
+            Navigates to the previous page of the menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenuInstance.Reset">
+            <summary>
+            Resets the menu to its initial state.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenuInstance.Close(System.Boolean)">
+            <summary>
+            Closes the menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenuInstance.Display">
+            <summary>
+            Displays the menu to the player.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenuInstance.OnKeyPress(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32)">
+            <summary>
+            Handles key press events for the menu.
+            </summary>
+            <param name="player">The player who pressed the key.</param>
+            <param name="key">The key that was pressed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseMenuInstance.Dispose(System.Boolean)">
+            <summary>
+            Disposes the menu instance.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Class.BaseVote">
+            <summary>
+            Represents a base vote menu with common properties and methods.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseVote.#ctor(System.String,System.String,CS2MenuManager.API.Class.BaseVoteInstance.YesNoVoteResult,CS2MenuManager.API.Class.BaseVoteInstance.YesNoVoteHandler,CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Represents a base vote menu with common properties and methods.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVote.Title">
+            <summary>
+            Gets the title of the vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVote.Details">
+            <summary>
+            Gets the details of the vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVote.VoteCaller">
+            <summary>
+            Gets or sets the player who initiated the current vote. (Null if the server initiated the vote)
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVote.Result">
+            <summary>
+            Gets the result callback for the vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVote.Handler">
+            <summary>
+            Gets the handler for the vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVote.Plugin">
+            <summary>
+            Gets the plugin instance.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVote.VoteTime">
+            <summary>
+            Gets or sets the duration of the vote in seconds.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseVote.DisplayVoteToAll(System.Int32)">
+            <summary>
+            Displays the vote to all players.
+            </summary>
+            <param name="time">The duration of the vote in seconds.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Class.BaseVoteInstance">
+            <summary>
+            Represents an instance of a vote menu with the vote data.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseVoteInstance.#ctor(System.Collections.Generic.List{CounterStrikeSharp.API.Core.CCSPlayerController},CS2MenuManager.API.Interface.IVoteMenu)">
+            <summary>
+            Represents an instance of a vote menu with the vote data.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVoteInstance.VoteMenu">
+            <summary>
+            Gets the vote menu associated with this instance.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVoteInstance.VoteController">
+            <summary>
+            Gets the vote controller for the vote instance.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVoteInstance.CurrentVotefilter">
+            <summary>
+            Gets the filter for the current vote, which determines which players are eligible to vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVoteInstance.Timer">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVoteInstance.VoteCount">
+            <summary>
+            Gets or sets the count of votes that have been cast in the current vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVoteInstance.VoterCount">
+            <summary>
+            Gets or sets the number of players who are eligible to vote in the current vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.BaseVoteInstance.Voters">
+            <summary>
+            Gets or sets an array that stores the slots of players who are eligible to vote.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseVoteInstance.Close">
+            <summary>
+            Closes the menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseVoteInstance.Display">
+            <summary>
+            Displays the vote menu.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Class.BaseVoteInstance.YesNoVoteHandler">
+            <summary>
+            Represents a method that handles vote-related actions, such as when a vote starts, a player votes, or the vote ends.
+            </summary>
+            <param name="action">The type of vote action being performed (e.g., start, vote, end).</param>
+            <param name="param1">The first parameter, typically the client slot of the player involved in the action.</param>
+            <param name="param2">The second parameter, typically the vote option chosen by the player (e.g., yes or no). <see cref="T:CS2MenuManager.API.Enum.CastVote"/></param>
+        </member>
+        <member name="T:CS2MenuManager.API.Class.BaseVoteInstance.YesNoVoteResult">
+            <summary>
+            Represents a method that handles the result of a vote and determines whether the vote passed or failed.
+            </summary>
+            <param name="info">The information about the vote result, including the number of votes and client details.</param>
+            <returns>True if the vote passed, otherwise false.</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.BaseVoteInstance.Dispose(System.Boolean)">
+            <summary>
+            Disposes the menu instance.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Class.Buttons">
+            <summary>
+            Represents a collection of button mappings for player controls.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Class.Buttons.ButtonMapping">
+            <summary>
+            Gets the dictionary mapping button names to their corresponding <see cref="T:CounterStrikeSharp.API.PlayerButtons"/> values.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Class.ItemOption">
+            <summary>
+            Represents an item option in the menu.
+            </summary>
+            <param name="display">The display text for the item.</param>
+            <param name="option">The disable option for the item.</param>
+            <param name="onSelect">The action to perform when the item is selected.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.ItemOption.#ctor(System.String,CS2MenuManager.API.Enum.DisableOption,System.Action{CounterStrikeSharp.API.Core.CCSPlayerController,CS2MenuManager.API.Class.ItemOption})">
+            <summary>
+            Represents an item option in the menu.
+            </summary>
+            <param name="display">The display text for the item.</param>
+            <param name="option">The disable option for the item.</param>
+            <param name="onSelect">The action to perform when the item is selected.</param>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.ItemOption.Text">
+            <summary>
+            Gets or sets the display text for the item.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.ItemOption.DisableOption">
+            <summary>
+            Gets or sets the disable option for the item.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.ItemOption.PostSelectAction">
+            <summary>
+            Gets or sets the action to execute after a menu item is selected.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.ItemOption.OnSelect">
+            <summary>
+            Gets or sets the action to perform when the item is selected.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.Library.TagRegex">
+            <remarks>
+            Pattern:<br/>
+            <code>&lt;[^&gt;]+&gt;</code><br/>
+            Options:<br/>
+            <code>RegexOptions.Compiled</code><br/>
+            Explanation:<br/>
+            <code>
+            ○ Match '&lt;'.<br/>
+            ○ Match a character other than '&gt;' atomically at least once.<br/>
+            ○ Match '&gt;'.<br/>
+            </code>
+            </remarks>
+        </member>
+        <member name="T:CS2MenuManager.API.Class.MenuManager">
+            <summary>
+            Manages the active menus for players.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Class.MenuManager.MenuTypesList">
+            <summary>
+            A static readonly dictionary that maps menu type names to their corresponding <see cref="T:System.Type"/> objects.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuManager.GetActiveMenu(CounterStrikeSharp.API.Core.CCSPlayerController)">
+            <summary>
+            Gets the active menu for the specified player.
+            </summary>
+            <param name="player">The player controller.</param>
+            <returns>The active menu instance, or null if no menu is active.</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuManager.CloseActiveMenu(CounterStrikeSharp.API.Core.CCSPlayerController)">
+            <summary>
+            Closes the active menu for the specified player.
+            </summary>
+            <param name="player">The player controller.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuManager.OpenMenu``1(CounterStrikeSharp.API.Core.CCSPlayerController,``0,System.Nullable{System.Int32},System.Func{CounterStrikeSharp.API.Core.CCSPlayerController,``0,CS2MenuManager.API.Interface.IMenuInstance})">
+            <summary>
+            Opens a menu for the specified player.
+            </summary>
+            <typeparam name="TMenu">The type of the menu.</typeparam>
+            <param name="player">The player controller.</param>
+            <param name="menu">The menu to open.</param>
+            <param name="firstItem">The index of the first item to display.</param>
+            <param name="createInstance">The function to create a menu instance.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuManager.OnKeyPress(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32)">
+            <summary>
+            Handles key press events for the active menu of the specified player.
+            </summary>
+            <param name="player">The player controller.</param>
+            <param name="key">The key that was pressed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuManager.CreateMenu``1(System.String,CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Creates a menu instance of a specified type
+            </summary>
+            <typeparam name="T">Type of menu to create (must implement BaseMenu)</typeparam>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+            <returns>New menu instance of a requested type</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuManager.MenuByType(System.Type,System.String,CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Creates a menu instance based on Type parameter
+            </summary>
+            <param name="menuType">Type of menu to create</param>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+            <returns>New menu instance of a requested type</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuManager.MenuByType(System.String,System.String,CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Creates a menu instance based on (string)Type parameter.
+            </summary>
+            <param name="menuType">Type of menu to create</param>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+            <returns>New menu instance of a requested type</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuManager.ReloadConfig">
+            <summary>
+            Reloads config variables
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Class.MenuTypeManager">
+            <summary>
+            Provides centralized management of menu types for players in a CS2 plugin.
+            </summary>
+            <remarks>
+            This static class handles the registration, retrieval, and switching between different
+            menu implementations for individual players. It supports both in-memory and database-backed
+            storage of player preferences.
+            </remarks>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuTypeManager.GetDefaultMenu">
+            <summary>
+            Gets the default menu type to use when no specific preference is set.
+            </summary>
+            <returns>The <see cref="T:System.Type"/> representing the default menu implementation.</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuTypeManager.GetPlayerMenuType(CounterStrikeSharp.API.Core.CCSPlayerController)">
+            <summary>
+            Retrieves the preferred menu type for a specific player.
+            </summary>
+            <param name="player">The player controller to look up.</param>
+            <returns>
+            The player's preferred menu type if set; otherwise falls back to the default menu type.
+            Will query the database if MySQL is configured and no cached value exists.
+            </returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuTypeManager.SetPlayerMenuType(CounterStrikeSharp.API.Core.CCSPlayerController,System.Type)">
+            <summary>
+            Sets the preferred menu type for a specific player.
+            </summary>
+            <param name="player">The player controller to update.</param>
+            <param name="menuType">The menu types to set as preferred.</param>
+            <returns>
+            The menu type that was set or the default menu type if the specified type wasn't valid.
+            Will update the database if MySQL is configured.
+            </returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuTypeManager.MenuTypeMenu``1(CounterStrikeSharp.API.Core.CCSPlayerController,CounterStrikeSharp.API.Core.BasePlugin,CS2MenuManager.API.Interface.IMenu)">
+            <summary>
+            Creates a menu selection interface for choosing between available menu types.
+            </summary>
+            <typeparam name="T">The type of menu to create.</typeparam>
+            <param name="player">The player controller this menu is for.</param>
+            <param name="plugin">The plugin instance that owns this menu.</param>
+            <param name="prevMenu">The previous menu to return to after selection.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuTypeManager.MenuTypeMenuByType(System.Type,CounterStrikeSharp.API.Core.CCSPlayerController,CounterStrikeSharp.API.Core.BasePlugin,CS2MenuManager.API.Interface.IMenu)">
+            <summary>
+            Creates a menu selection interface for choosing between available menu types using a specific menu implementation.
+            </summary>
+            <param name="type">The type of menu to instantiate.</param>
+            <param name="player">The player controller this menu is for.</param>
+            <param name="plugin">The plugin instance that owns this menu.</param>
+            <param name="prevMenu">The previous menu to return to after selection.</param>
+            <returns>The created menu instance.</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuTypeManager.MenuTypeMenuByType(System.String,CounterStrikeSharp.API.Core.CCSPlayerController,CounterStrikeSharp.API.Core.BasePlugin,CS2MenuManager.API.Interface.IMenu)">
+            <summary>
+            Creates a menu selection interface for choosing between available menu types using a specific menu type name.
+            </summary>
+            <param name="type">The name of the menu type to instantiate.</param>
+            <param name="player">The player controller this menu is for.</param>
+            <param name="plugin">The plugin instance that owns this menu.</param>
+            <param name="prevMenu">The previous menu to return to after selection.</param>
+            <returns>The created menu instance.</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.MenuTypeManager.AddMenuTypeMenuItems(CS2MenuManager.API.Class.BaseMenu,CS2MenuManager.API.Interface.IMenu)">
+            <summary>
+            Adds menu type selection items to an existing menu instance.
+            </summary>
+            <param name="menu">The menu to add items to.</param>
+            <param name="prevMenu">The previous menu to return to after selection.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Class.VoteManager">
+            <summary>
+            Manages the voting process in the game.
+            Ensures only one active vote runs at a time.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Class.VoteManager.IsVoteActive">
+            <summary>
+            Checks if a vote is currently active.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.VoteManager.CancelActiveVote">
+            <summary>
+            Force ends the active vote if needed.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Class.VoteManager.OpenVoteMenu``1(System.Collections.Generic.List{CounterStrikeSharp.API.Core.CCSPlayerController},``0,System.Func{System.Collections.Generic.List{CounterStrikeSharp.API.Core.CCSPlayerController},``0,CS2MenuManager.API.Interface.IVoteMenuInstance})">
+            <summary>
+            Opens a vote menu if no active vote exists.
+            </summary>
+            <typeparam name="TMenu">The type of the menu to open.</typeparam>
+            <param name="players">The list of players to include in the vote.</param>
+            <param name="menu">The menu to display.</param>
+            <param name="createInstance">A function to create a new instance of the vote.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Class.YesNoVoteInfo">
+            <summary>
+            Contains information about the result of a vote.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Class.YesNoVoteInfo.TotalVotes">
+            <summary>
+            Gets or sets the total number of votes tallied.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Class.YesNoVoteInfo.YesVotes">
+            <summary>
+            Gets or sets the number of votes for yes.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Class.YesNoVoteInfo.NoVotes">
+            <summary>
+            Gets or sets the number of votes for no.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Class.YesNoVoteInfo.TotalClients">
+            <summary>
+            Gets or sets the number of clients who could vote.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Class.YesNoVoteInfo.ClientInfo">
+            <summary>
+            Gets or sets the client voting information.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Enum.CastVote">
+            <summary>
+            Represents the possible vote options.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.CastVote.VOTE_NOTINCLUDED">
+            <summary>
+            The client is not included in the vote.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.CastVote.VOTE_OPTION1">
+            <summary>
+            Represents the first vote option (typically "Yes").
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.CastVote.VOTE_OPTION2">
+            <summary>
+            Represents the second vote option (typically "No").
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.CastVote.VOTE_OPTION3">
+            <summary>
+            Represents the third vote option.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.CastVote.VOTE_OPTION4">
+            <summary>
+            Represents the fourth vote option.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.CastVote.VOTE_OPTION5">
+            <summary>
+            Represents the fifth vote option.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.CastVote.VOTE_UNCAST">
+            <summary>
+            Represents an uncast vote.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Enum.DisableOption">
+            <summary>
+            Defines the options for disabling menu items.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.DisableOption.None">
+            <summary>
+            No disabling option is applied.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.DisableOption.DisableShowNumber">
+            <summary>
+            Disables the item and displays it's number.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.DisableOption.DisableHideNumber">
+            <summary>
+            Disables the item and hides it's number.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Enum.PostSelectAction">
+            <summary>
+            Specifies the action to perform after a menu item is selected.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.PostSelectAction.Close">
+            <summary>
+            Closes the menu after selection.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.PostSelectAction.Reset">
+            <summary>
+            Resets the menu after selection.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.PostSelectAction.Nothing">
+            <summary>
+            Performs no action after selection.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Enum.YesNoVoteAction">
+            <summary>
+            Represents the possible actions during a vote.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.YesNoVoteAction.VoteAction_Start">
+            <summary>
+            The vote has started.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.YesNoVoteAction.VoteAction_Vote">
+            <summary>
+            A player has cast their vote.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.YesNoVoteAction.VoteAction_End">
+            <summary>
+            The vote has ended.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Enum.YesNoVoteEndReason">
+            <summary>
+            Represents the possible reasons for a vote to end.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.YesNoVoteEndReason.VoteEnd_AllVotes">
+            <summary>
+            The vote ended because all possible votes were cast.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.YesNoVoteEndReason.VoteEnd_TimeUp">
+            <summary>
+            The vote ended because the time allocated for the vote ran out.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Enum.YesNoVoteEndReason.VoteEnd_Cancelled">
+            <summary>
+            The vote was canceled before it could complete.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Interface.IMenu">
+            <summary>
+            Represents a menu interface with common properties and methods.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenu.Title">
+            <summary>
+            Gets or sets the title of the menu.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenu.ItemOptions">
+            <summary>
+            Gets the list of item options in the menu.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenu.ExitButton">
+            <summary>
+            Gets or sets a value indicating whether the menu has an exit button.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenu.MenuTime">
+            <summary>
+            Gets or sets the time duration for which the menu is displayed.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenu.PrevMenu">
+            <summary>
+            Gets or sets the previous menu.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenu.Plugin">
+            <summary>
+            Gets the plugin instance.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenu.AddItem(System.String,System.Action{CounterStrikeSharp.API.Core.CCSPlayerController,CS2MenuManager.API.Class.ItemOption},CS2MenuManager.API.Enum.DisableOption)">
+            <summary>
+            Adds an item to the menu with a specified display text and selection action.
+            </summary>
+            <param name="display">The text to display for the item.</param>
+            <param name="onSelect">The action to perform when the item is selected.</param>
+            <param name="disableOption">The disable option for the item.</param>
+            <returns>The created item option.</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenu.AddItem(System.String,CS2MenuManager.API.Enum.DisableOption)">
+            <summary>
+            Adds an item to the menu with a specified display text and disable option.
+            </summary>
+            <param name="display">The text to display for the item.</param>
+            <param name="disableOption">The disable option for the item.</param>
+            <returns>The created item option.</returns>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenu.Display(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32)">
+            <summary>
+            Displays the menu to a specific player for a specified duration.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenu.DisplayAt(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32,System.Int32)">
+            <summary>
+            Displays the menu to a specific player for a specified duration, starting from the given item.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="firstItem">First item to begin drawing from.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenu.DisplayToAll(System.Int32)">
+            <summary>
+            Displays the menu to all players for a specified duration.
+            </summary>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenu.DisplayAtToAll(System.Int32,System.Int32)">
+            <summary>
+            Displays the menu to all players for a specified duration, starting from the given item.
+            </summary>
+            <param name="firstItem">First item to begin drawing from.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Interface.IMenuInstance">
+            <summary>
+            Represents an instance of a menu with player-specific data.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenuInstance.Player">
+            <summary>
+            Gets the player associated with this menu instance.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenuInstance.Page">
+            <summary>
+            Gets the current page number of the menu.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenuInstance.CurrentOffset">
+            <summary>
+            Gets the current offset of the menu items.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenuInstance.NumPerPage">
+            <summary>
+            Gets the number of items displayed per page.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenuInstance.PrevPageOffsets">
+            <summary>
+            Gets the stack of previous page offsets.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IMenuInstance.Menu">
+            <summary>
+            Gets the menu associated with this instance.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenuInstance.NextPage">
+            <summary>
+            Navigates to the next page of the menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenuInstance.PrevPage">
+            <summary>
+            Navigates to the previous page of the menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenuInstance.Reset">
+            <summary>
+            Resets the menu to its original state.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenuInstance.Close(System.Boolean)">
+            <summary>
+            Closes the menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenuInstance.Display">
+            <summary>
+            Displays the menu to the player.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IMenuInstance.OnKeyPress(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32)">
+            <summary>
+            Handles key press events for the menu.
+            </summary>
+            <param name="player">The player who pressed the key.</param>
+            <param name="key">The key that was pressed.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Interface.IVoteMenu">
+            <summary>
+            Represents a vote menu interface with common properties and methods.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenu.Title">
+            <summary>
+            Gets the title of the vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenu.Details">
+            <summary>
+            Gets the details of the vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenu.VoteCaller">
+            <summary>
+            Gets the player who initiated the current vote. (Null if the vote was initiated by the server)
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenu.Result">
+            <summary>
+            Gets the result callback for the vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenu.Handler">
+            <summary>
+            Gets the handler for the vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenu.Plugin">
+            <summary>
+            Gets the plugin instance.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenu.VoteTime">
+            <summary>
+            Gets the duration of the vote in seconds.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IVoteMenu.DisplayVoteToAll(System.Int32)">
+            <summary>
+            Displays the vote to all players.
+            </summary>
+            <param name="time">The duration of the vote in seconds.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Interface.IVoteMenuInstance">
+            <summary>
+            Represents an instance of a vote menu with the vote data.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenuInstance.VoteMenu">
+            <summary>
+            Gets the vote menu associated with this instance.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenuInstance.VoteController">
+            <summary>
+            Gets the vote controller for the vote instance.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenuInstance.CurrentVotefilter">
+            <summary>
+            Gets the filter for the current vote, which determines which players are eligible to vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenuInstance.Timer">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenuInstance.VoteCount">
+            <summary>
+            Gets the count of votes that have been cast in the current vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenuInstance.VoterCount">
+            <summary>
+            Gets the number of players who are eligible to vote in the current vote.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Interface.IVoteMenuInstance.Voters">
+            <summary>
+            Gets an array that stores the slots of players who are eligible to vote.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IVoteMenuInstance.Close">
+            <summary>
+            Closes the vote menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Interface.IVoteMenuInstance.Display">
+            <summary>
+            Displays the vote menu.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.CenterHtmlMenu">
+            <summary>
+            Represents a center HTML menu with customizable colors and options.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.CenterHtmlMenu.#ctor(System.String,CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Represents a center HTML menu with customizable colors and options.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.CenterHtmlMenu.Display(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32)">
+            <summary>
+            Displays the menu to the specified player for a specified duration.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.CenterHtmlMenu.DisplayAt(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32,System.Int32)">
+            <summary>
+            Displays the menu to the specified player for a specified duration, starting from the given item.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="firstItem">The index of the first item to display.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.CenterHtmlMenuInstance">
+            <summary>
+            Represents an instance of a center HTML menu with player-specific data.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Menu.CenterHtmlMenuInstance.NumPerPage">
+            <summary>
+            Gets the number of items displayed per page.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Menu.CenterHtmlMenuInstance.MenuItemsPerPage">
+            <summary>
+            Gets the number of items displayed per page.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Menu.CenterHtmlMenuInstance.HasNextButton">
+            <summary>
+            Gets a value indicating whether the menu has a next button.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.CenterHtmlMenuInstance.#ctor(CounterStrikeSharp.API.Core.CCSPlayerController,CS2MenuManager.API.Interface.IMenu)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CS2MenuManager.API.Menu.CenterHtmlMenuInstance"/> class.
+            </summary>
+            <param name="player">The player associated with this menu instance.</param>
+            <param name="menu">The menu associated with this instance.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.CenterHtmlMenuInstance.Display">
+            <summary>
+            Displays the menu to the player.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.CenterHtmlMenuInstance.Close(System.Boolean)">
+            <summary>
+            Closes the menu.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.ChatMenu">
+            <summary>
+            Represents a chat menu with customizable colors.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.ChatMenu.#ctor(System.String,CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Represents a chat menu with customizable colors.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.ChatMenu.Display(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32)">
+            <summary>
+            Displays the menu to the specified player for a specified duration.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.ChatMenu.DisplayAt(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32,System.Int32)">
+            <summary>
+            Displays the menu to the specified player for a specified duration, starting from the given item.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="firstItem">The index of the first item to display.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.ChatMenuInstance">
+            <summary>
+            Represents an instance of a chat menu with player-specific data.
+            </summary>
+            <param name="player">The player associated with this menu instance.</param>
+            <param name="menu">The menu associated with this instance.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.ChatMenuInstance.#ctor(CounterStrikeSharp.API.Core.CCSPlayerController,CS2MenuManager.API.Menu.ChatMenu)">
+            <summary>
+            Represents an instance of a chat menu with player-specific data.
+            </summary>
+            <param name="player">The player associated with this menu instance.</param>
+            <param name="menu">The menu associated with this instance.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.ChatMenuInstance.Display">
+            <summary>
+            Displays the menu to the player.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.ConsoleMenu">
+            <summary>
+            Represents a console menu.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.ConsoleMenu.#ctor(System.String,CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Represents a console menu.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.ConsoleMenu.Display(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32)">
+            <summary>
+            Displays the menu to the specified player for a specified duration.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.ConsoleMenu.DisplayAt(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32,System.Int32)">
+            <summary>
+            Displays the menu to the specified player for a specified duration, starting from the given item.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="firstItem">The index of the first item to display.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.ConsoleMenuInstance">
+            <summary>
+            Represents an instance of a console menu with player-specific data.
+            </summary>
+            <param name="player">The player associated with this menu instance.</param>
+            <param name="menu">The menu associated with this instance.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.ConsoleMenuInstance.#ctor(CounterStrikeSharp.API.Core.CCSPlayerController,CS2MenuManager.API.Interface.IMenu)">
+            <summary>
+            Represents an instance of a console menu with player-specific data.
+            </summary>
+            <param name="player">The player associated with this menu instance.</param>
+            <param name="menu">The menu associated with this instance.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.ConsoleMenuInstance.Display">
+            <summary>
+            Displays the menu to the player.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.PanoramaVote">
+            <summary>
+            Represents a panorama vote menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.PanoramaVote.#ctor(System.String,System.String,CS2MenuManager.API.Class.BaseVoteInstance.YesNoVoteResult,CS2MenuManager.API.Class.BaseVoteInstance.YesNoVoteHandler,CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Represents a panorama vote menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.PanoramaVote.DisplayVoteToAll(System.Int32)">
+            <summary>
+            Displays the vote to all players.
+            </summary>
+            <param name="time">The duration of the vote in seconds.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.PanoramaVoteInstance">
+            <summary>
+            Represents an instance of a Panorama vote.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.PanoramaVoteInstance.#ctor(System.Collections.Generic.List{CounterStrikeSharp.API.Core.CCSPlayerController},CS2MenuManager.API.Menu.PanoramaVote)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CS2MenuManager.API.Menu.PanoramaVoteInstance"/> class.
+            </summary>
+            <param name="players">The list of players participating in the vote.</param>
+            <param name="menu">The menu associated with the vote.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.PanoramaVoteInstance.Close">
+            <summary>
+            Closes the menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.PanoramaVoteInstance.Display">
+            <summary>
+            Displays the vote menu.
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.PlayerMenu">
+            <summary>
+            Represents a menu showing the menu selected by the players.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.PlayerMenu.#ctor(System.String,CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Represents a menu showing the menu selected by the players.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.PlayerMenu.Display(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32)">
+            <summary>
+            Displays the menu to the specified player for a specified duration.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.PlayerMenu.DisplayAt(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32,System.Int32)">
+            <summary>
+            Displays the menu to the specified player for a specified duration, starting from the given item.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="firstItem">The index of the first item to display.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.WasdMenu">
+            <summary>
+            Represents a WASD menu with customizable colors and options.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenu.#ctor(System.String,CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Represents a WASD menu with customizable colors and options.
+            </summary>
+            <param name="title">The title of the menu.</param>
+            <param name="plugin">The plugin associated with the menu.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenu.Display(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32)">
+            <summary>
+            Displays the menu to the specified player for a specified duration.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenu.DisplayAt(CounterStrikeSharp.API.Core.CCSPlayerController,System.Int32,System.Int32)">
+            <summary>
+            Displays the menu to the specified player for a specified duration, starting from the given item.
+            </summary>
+            <param name="player">The player to whom the menu is displayed.</param>
+            <param name="firstItem">The index of the first item to display.</param>
+            <param name="time">The duration for which the menu is displayed.</param>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.WasdMenuInstance">
+            <summary>
+            Represents an instance of a WASD menu with player-specific data.
+            </summary>
+        </member>
+        <member name="P:CS2MenuManager.API.Menu.WasdMenuInstance.NumPerPage">
+            <summary>
+            Gets the number of items displayed per page.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Menu.WasdMenuInstance.DisplayString">
+            <summary>
+            Gets or sets the display string for the menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuInstance.#ctor(CounterStrikeSharp.API.Core.CCSPlayerController,CS2MenuManager.API.Interface.IMenu)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CS2MenuManager.API.Menu.WasdMenuInstance"/> class.
+            </summary>
+            <param name="player">The player associated with this menu instance.</param>
+            <param name="menu">The menu associated with this instance.</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuInstance.Display">
+            <summary>
+            Displays the menu to the player.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuInstance.Close(System.Boolean)">
+            <summary>
+            Closes the menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuInstance.OnTick">
+            <summary>
+            Handles the tick event for the menu.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuInstance.Choose">
+            <summary>
+            Chooses the currently selected option.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuInstance.ScrollDown">
+            <summary>
+            Scrolls down to the next option.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuInstance.ScrollUp">
+            <summary>
+            Scrolls up to the previous option.
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuInstance.SaveMenuState">
+            <summary>
+            Saves the current menu state (page number, offset, selected option, and page offset stack)
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuInstance.RestoreMenuState">
+            <summary>
+            Restores the previously saved menu state (page number, offset, selected option, and page offset stack)
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.WasdMenuInstance.MenuState">
+            <summary>
+            Menu state class, used to save the page number, offset, selected option, and page offset stack of a menu
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.API.Menu.WasdMenuInstance.MenuStateStorage">
+            <summary>
+            Static dictionary used to store menu states for all players
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuInstance.CleanupPlayerState(System.UInt64)">
+            <summary>
+            Cleans up the menu state for a specific player
+            </summary>
+            <param name="steamId">The player's SteamID</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuInstance.CleanupAllStates">
+            <summary>
+            Cleans up all menu states
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.API.Menu.WasdMenuStateManager">
+            <summary>
+            WasdMenu state manager, used to handle state cleanup when players disconnect or when the map changes
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuStateManager.RegisterEvents(CounterStrikeSharp.API.Core.BasePlugin)">
+            <summary>
+            Registers WasdMenu state manager events
+            </summary>
+            <param name="plugin">The plugin instance</param>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuStateManager.OnPlayerDisconnect(CounterStrikeSharp.API.Core.EventPlayerDisconnect,CounterStrikeSharp.API.Core.GameEventInfo)">
+            <summary>
+            Handles player disconnect event
+            </summary>
+        </member>
+        <member name="M:CS2MenuManager.API.Menu.WasdMenuStateManager.OnRoundEnd(CounterStrikeSharp.API.Core.EventRoundEnd,CounterStrikeSharp.API.Core.GameEventInfo)">
+            <summary>
+            Handles round end event
+            </summary>
+        </member>
+        <member name="T:CS2MenuManager.ProjectInfo">
+            <summary>
+            Provides static access to CS2MenuManager information.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.ProjectInfo.Version">
+            <summary>
+            Gets the current version of the CS2MenuManager.
+            </summary>
+        </member>
+        <member name="F:CS2MenuManager.ProjectInfo.Author">
+            <summary>
+            Gets the author of the CS2MenuManager.
+            </summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.TagRegex_0">
+            <summary>Custom <see cref="T:System.Text.RegularExpressions.Regex"/>-derived type for the TagRegex method.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.TagRegex_0.Instance">
+            <summary>Cached, thread-safe singleton instance.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.TagRegex_0.#ctor">
+            <summary>Initializes the instance.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.TagRegex_0.RunnerFactory">
+            <summary>Provides a factory for creating <see cref="T:System.Text.RegularExpressions.RegexRunner"/> instances to be used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.TagRegex_0.RunnerFactory.CreateInstance">
+            <summary>Creates an instance of a <see cref="T:System.Text.RegularExpressions.RegexRunner"/> used by methods on <see cref="T:System.Text.RegularExpressions.Regex"/>.</summary>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.TagRegex_0.RunnerFactory.Runner">
+            <summary>Provides the runner that contains the custom logic implementing the specified regular expression.</summary>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.TagRegex_0.RunnerFactory.Runner.Scan(System.ReadOnlySpan{System.Char})">
+            <summary>Scan the <paramref name="inputSpan"/> starting from base.runtextstart for the next match.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.TagRegex_0.RunnerFactory.Runner.TryFindNextPossibleStartingPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Search <paramref name="inputSpan"/> starting from base.runtextpos for the next location a match could possibly start.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if a possible match was found; false if no more matches are possible.</returns>
+        </member>
+        <member name="M:System.Text.RegularExpressions.Generated.TagRegex_0.RunnerFactory.Runner.TryMatchAtCurrentPosition(System.ReadOnlySpan{System.Char})">
+            <summary>Determine whether <paramref name="inputSpan"/> at base.runtextpos is a match for the regular expression.</summary>
+            <param name="inputSpan">The text being scanned by the regular expression.</param>
+            <returns>true if the regular expression matches at the current position; otherwise, false.</returns>
+        </member>
+        <member name="T:System.Text.RegularExpressions.Generated.Utilities">
+            <summary>Helper methods used by generated <see cref="T:System.Text.RegularExpressions.Regex"/>-derived implementations.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout">
+            <summary>Default timeout value set in <see cref="T:System.AppContext"/>, or <see cref="F:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout"/> if none was set.</summary>
+        </member>
+        <member name="F:System.Text.RegularExpressions.Generated.Utilities.s_hasTimeout">
+            <summary>Whether <see cref="F:System.Text.RegularExpressions.Generated.Utilities.s_defaultTimeout"/> is non-infinite.</summary>
+        </member>
+    </members>
+</doc>

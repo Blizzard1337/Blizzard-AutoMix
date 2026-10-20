@@ -108,7 +108,6 @@ bind "n" "css_automixmenu"
 | `.stop` | End the current match and return to the ready stage. |
 | `.restart` | Restart the match. |
 | `.roundknife` | Toggle the knife-round setting. |
-| `.settings` | Display the current match settings. |
 | `.map <map>` | Change the current map. |
 | `.asay <message>` | Send an administrator chat message. |
 

@@ -85,7 +85,6 @@ Commands accept either `.` or `/` in public or team chat. Their availability dep
 | `.pick <player>` | Pick a player during your captain turn. |
 | `.stay`, `.switch` | Choose the starting side after winning the knife round. |
 | `.pause`, `.unpause` | Request a pause or resume the match. |
-| `.tac`, `.tech` | Request a tactical or technical pause. |
 | `.surrender` | Start a team surrender vote. |
 | `.votekick` | Open the teammate votekick selection menu. |
 | `.spec` | Move to spectators, subject to match rules. |
